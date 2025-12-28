@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Badil Arrohman | Frontend Developer & Network Engineer</title>
+
+    <meta
+      name="description"
+      content="Portofolio Muhammad Badil Arrohman, seorang mahasiswa Sistem Informasi yang berfokus pada Frontend Web Development dan Network Engineering (MikroTik). Lihat proyek dan sertifikasi saya di sini."
+    />
+
+    <meta
+      name="keywords"
+      content="Badil Arrohman, Muhammad Badil Arrohman, Frontend Developer, Network Engineer, Portofolio IT, Mahasiswa Unpam, Web Developer Serang, MikroTik Certified"
+    />
+
+    <meta name="author" content="Muhammad Badil Arrohman" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="badil-portofolio.netlify.app" />
+    <meta
+      property="og:title"
+      content="Badil Arrohman - Creative Developer & Network Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Mewujudkan ide kreatif menjadi pengalaman digital yang fungsional. Lihat portofolio lengkap saya."
+    />
+    <meta property="og:image" content="Assets/Image/Personal Picture.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Badil Arrohman Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Frontend Developer & Network Engineer Portfolio."
+    />
+    <meta name="twitter:image" content="Assets/Image/Personal Picture.webp" />
+
+    <link
+      rel="icon"
+      href="Assets/Image/Personal Picture.webp"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Badil Arrohman",
+        "url": "badil-portofolio.netlify.app",
+        "image": "Assets/Image/Personal Picture.webp",
+        "jobTitle": ["Frontend Developer", "Network Engineer"],
+        "alumniOf": "Universitas Pamulang Serang",
+        "sameAs": [
+          "https://www.linkedin.com/in/badilll/",
+          "https://www.instagram.com/zzznrts/",
+          "https://github.com/DilFrontendDev"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">Dil<Meta:compat></Meta:compat></a>
+
+        <!-- Mobile toggler -->
+        <button id="nav-toggle" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#certificates">Certificate</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Welcome to My Page</h1>
+        <p class="hero__tagline">Come and get to know me better.</p>
+
+        <div class="hero__btn-group">
+          <a href="#projects" class="hero__cta">Explore My Work</a>
+
+          <a
+            href="Assets/Document/M Badil Arrohman CV.pdf"
+            class="hero__cta outline"
+            download
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+
+      <!-- subtle animated background -->
+      <div class="hero__bg">
+        <span class="circle c1"></span>
+        <span class="circle c2"></span>
+        <span class="circle c3"></span>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-grid">
+          <!-- Card 1 -->
+          <article class="project-card">
+            <div class="card-img">
+              <img
+                src="Assets/Image/Project/java project.webp"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Simple Java App</h3>
+              <p>
+                Terminal or GUI App using IF ELSE and Switch Case for Collage
+              </p>
+              <div class="tech">
+                <span>Java</span>
+              </div>
+              <a href="Project/Project ATM Java/index.html" class="card-link"
+                >View Details →</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card">
+            <div class="card-img">
+              <img
+                src="Assets/Image/Project/pomodoro project.webp"
+                alt="Project 2"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>PomoLearn</h3>
+              <p>Timer Countdown for Practice Pomodoro Technique</p>
+              <div class="tech">
+                <span>HTML</span><span>CSS</span><span>Javascript</span
+                ><span>SCSS/SASS</span>
+              </div>
+              <a
+                href="https://github.com/DilFrontendDev/PomoLearn"
+                class="card-link"
+                target="_blank"
+                >View Details →</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card">
+            <div class="card-img">
+              <img
+                src="Assets/Image/Project/personal portofolio.webp"
+                alt="Project 3"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Personal Portofolio</h3>
+              <p>This website im creating for my personal use</p>
+              <div class="tech">
+                <span>HTML</span><span>CSS</span><span>Javascript</span>
+              </div>
+              <a href="#projects" class="card-link">No Details </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== CERTIFICATE SECTION ==== -->
+    <section id="certificates" class="certificates">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Professional credentials & achievements.</p>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-img-wrapper">
+              <img
+                src="Assets/Image/Certificate/MTCNA.webp"
+                alt="MTCNA Certificate"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-body">
+              <span class="cert-date">Issued 2027</span>
+              <h3>MTCNA - MikroTik Certified Network Associate</h3>
+              <p class="cert-issuer">MikroTik</p>
+              <a href="#" class="cert-link"
+                >View Certificate <span class="arrow">→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-img-wrapper">
+              <img
+                src="Assets/Image/Certificate/MTCTCE.webp"
+                alt="MTCTCE Certificate"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-body">
+              <span class="cert-date">Issued 2027</span>
+              <h3>MTCTCE - Traffic Control Engineer</h3>
+              <p class="cert-issuer">MikroTik</p>
+              <a href="#" class="cert-link"
+                >View Certificate <span class="arrow">→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-img-wrapper">
+              <img
+                src="Assets/Image/Certificate/Learn Basic Web Programming with HTML5 CSS3 Javascript.webp"
+                alt="Frontend Certificate"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-body">
+              <span class="cert-date">Issued 2028</span>
+              <h3>Belajar Dasar Pemrograman Web</h3>
+              <p class="cert-issuer">Dicoding Indonesia</p>
+              <a href="#" class="cert-link"
+                >View Certificate <span class="arrow">→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-img-wrapper">
+              <img
+                src="Assets/Image/Certificate/Introduction to Programming Using JavaScript.webp"
+                alt="Frontend Certificate"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-body">
+              <span class="cert-date">Issued 2028</span>
+              <h3>Belajar Dasar Pemrograman Javascript</h3>
+              <p class="cert-issuer">Dicoding Indonesia</p>
+              <a href="#" class="cert-link"
+                >View Certificate <span class="arrow">→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-img-wrapper">
+              <img
+                src="Assets/Image/Certificate/Programming in HTML5 with JavaScript and CSS3.webp"
+                alt="Frontend Certificate"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-body">
+              <span class="cert-date">Issued 2028</span>
+              <h3>Belajar Membuat Frontend Web</h3>
+              <p class="cert-issuer">Dicoding Indonesia</p>
+              <a href="#" class="cert-link"
+                >View Certificate <span class="arrow">→</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="cert-modal" class="cert-modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="modal-img" />
+      <div id="caption"></div>
+    </div>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-img">
+            <div class="img-wrapper">
+              <img
+                src="Assets/Image/Personal/Personal Picture.webp"
+                alt="Badil Arrohman"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="about-text">
+            <h3>Passionate Developer & Learner</h3>
+            <p>
+              Hallo! Im <strong>Muhammad Badil Arrohman</strong>. Im is someone
+              who had focus on creating digital experience that have functional
+              and purpose. I have a great interest in turning creative ideas
+              into digital form.
+            </p>
+
+            <div class="about-info">
+              <div class="info-item">
+                <span class="label">Education:</span>
+                <span class="val">Information System</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Main Skill:</span>
+                <span class="val">Frontend Web & Network Engineering</span>
+              </div>
+            </div>
+
+            <div class="skills">
+              <h4>My Tech Stack</h4>
+              <div class="skills-grid">
+                <span>HTML & CSS</span>
+                <span>TailwindCSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>Git & GitHub</span>
+                <span>Linux Ubuntu</span>
+                <span>Gemini CLI</span>
+                <span>DeepSeek</span>
+                <span>Qwen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-wrapper">
+          <p class="contact-lead">
+            Let’s connect. I’d love to hear your ideas, feedback, or just say hi
+            through my social media.
+          </p>
+
+          <div class="social-list">
+            <a
+              href="https://www.instagram.com/zzznrts/"
+              target="_blank"
+              class="social-link"
+            >
+              <span class="handle">@zznrts</span>
+            </a>
+
+            <a
+              href="https://www.facebook.com/DilAnakMamah"
+              target="_blank"
+              class="social-link"
+            >
+              <span class="handle">Dil Lagi Scrolling Fesnuk</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/badilll/"
+              target="_blank"
+              class="social-link"
+            >
+              <span class="handle">Muhammad Badil Arrohman</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">Badil Arrohman<Meta:compat></Meta:compat></a>
+          <p>Crafting ideas into real experience since 2025.</p>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Badil Arrohman. All rights reserved.</p>
+          <div class="footer-line"></div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="download-toast" class="download-toast">
+      <div class="toast-icon">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+      </div>
+      <div class="toast-content">
+        <h4>Downloaded!!</h4>
+        <p>Thanks for your interest!</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

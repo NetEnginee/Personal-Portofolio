@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badil - Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">Badil Arrohman<Meta:compat></Meta:compat></a>
+
+            <!-- Mobile toggler -->
+            <button id="nav-toggle" aria-label="Buka menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../../index.html">Back to Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="post-container">
+        <header class="post-header">
+            <div class="post-meta">
+                <span class="category">Desktop Application</span>
+                <span class="dot"></span>
+                <span class="date">December 18, 2025</span>
+            </div>
+            <h1 class="post-title">Membangun Aplikasi ATM Sederhana dengan Java</h1>
+            <p class="post-excerpt">
+                Eksplorasi logika pemrograman fundamental menggunakan Java untuk menciptakan sistem manajemen transaksi
+                yang efisien dan mudah digunakan.
+            </p>
+        </header>
+
+        <div class="post-hero-image">
+            <img src="../Assets/java project.webp" alt="Java Code Header" loading="lazy">
+            <div class="image-overlay"></div>
+        </div>
+
+        <article class="post-content">
+            <section class="post-section">
+                <h2>Fungsionalitas Sistem ATM (Berdasarkan Kode Sumber)</h2>
+                <p>
+                    Program ini diimplementasikan menggunakan kelas <code>ATM</code> dalam paket
+                    <code>ATM_Sederhana</code>.
+                    Sistem menggunakan variabel integer <code>saldo</code> dengan nilai awal sebesar Rp 1.000.000
+                    sebagai
+                    basis
+                    data transaksi. Berikut adalah rincian logika transaksinya:
+                </p>
+
+                <div class="logic-list">
+                    <div class="logic-item">
+                        <div class="logic-num">01</div>
+                        <div class="logic-info">
+                            <h3>Cek Saldo (Check Balance)</h3>
+                            <p>
+                                Sistem memanggil nilai variabel <code>saldo</code> saat ini dan menampilkannya langsung
+                                ke
+                                konsol. Ini memberikan informasi instan mengenai dana yang tersedia sebelum melakukan
+                                transaksi
+                                lain.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="logic-item">
+                        <div class="logic-num">02</div>
+                        <div class="logic-info">
+                            <h3>Tarik Tunai (Withdrawal)</h3>
+                            <p>
+                                Logika ini melibatkan pengecekan kondisi <code>if-else</code>. Jika jumlah penarikan
+                                lebih
+                                besar
+                                dari saldo, sistem menolak transaksi dengan pesan "Saldo tidak mencukupi". Jika valid,
+                                saldo
+                                akan dikurangi secara otomatis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="logic-item">
+                        <div class="logic-num">03</div>
+                        <div class="logic-info">
+                            <h3>Setor Tunai (Deposit)</h3>
+                            <p>
+                                Fitur penambahan saldo di mana input dari pengguna ditambahkan langsung ke variabel
+                                <code>saldo</code> utama melalui operasi aritmatika penambahan. Saldo terbaru akan
+                                ditampilkan
+                                segera setelah setoran berhasil.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="logic-item">
+                        <div class="logic-num">04</div>
+                        <div class="logic-info">
+                            <h3>Keluar (Exit System)</h3>
+                            <p>
+                                Sistem akan menghentikan perulangan <code>do-while</code> dan menampilkan pesan "Terima
+                                kasih
+                                telah menggunakan ATM kami" sebagai penutup sesi transaksi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="post-section error-handling">
+                <h2>Mekanisme Kontrol & Validasi</h2>
+                <p>
+                    Seluruh interaksi dibungkus dalam blok perulangan <strong>do-while</strong> yang terus berjalan
+                    selama
+                    pilihan pengguna bukan nomor 4. Selain itu, terdapat blok <code>default</code> pada struktur
+                    <code>switch</code> untuk menangani input angka yang tidak tersedia di menu, sehingga program tidak
+                    langsung
+                    berhenti saat terjadi kesalahan input.
+                </p>
+            </section>
+
+            <section class="post-section source-code">
+                <h2>Implementasi Kode Sumber</h2>
+                <p>
+                    Berikut adalah tangkapan layar dari implementasi lengkap file <code>ATM.java</code>. Struktur kode
+                    dirancang
+                    agar mudah dipahami dan dikembangkan.
+            </section>
+
+            <div class="code-image-wrapper">
+                <img src="../Assets/Java 1.png" alt="Source Code ATM.java" loading="lazy">
+            </div>
+
+            <div class="code-image-wrapper">
+                <img src="../Assets/Java 2.png" alt="Source Code ATM.java" loading="lazy">
+            </div>
+
+            </section>
+        </article>
+    </main>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
