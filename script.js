@@ -1,6 +1,9 @@
 const toggle = document.getElementById("nav-toggle");
 const menu = document.getElementById("nav-menu");
-toggle.addEventListener("click", () => menu.classList.toggle("show"));
+
+if (toggle && menu) {
+  toggle.addEventListener("click", () => menu.classList.toggle("show"));
+}
 
 const sections = document.querySelectorAll("section[id]");
 
@@ -60,17 +63,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+document.addEventListener("keydown", (e) => {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey &&
+      e.shiftKey &&
+      (e.key === "I" || e.key === "J" || e.key === "C")) ||
+    (e.ctrlKey && e.key === "u")
+  ) {
+    e.preventDefault();
+  }
+});
+
 const cvButton = document.querySelector(
   'a[href*="Assets/Document/M Badil Arrohman CV.pdf"]'
 );
-const toastElement = document.getElementById("download-toast");
-
-if (cvButton) {
-  cvButton.addEventListener("click", () => {
-    toastElement.classList.add("show");
-
-    setTimeout(() => {
-      toastElement.classList.remove("show");
-    }, 3000);
-  });
-}
