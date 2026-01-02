@@ -80,3 +80,13 @@ document.addEventListener("keydown", (e) => {
 const cvButton = document.querySelector(
   'a[href*="Assets/Document/M Badil Arrohman CV.pdf"]'
 );
+
+const preloader = document.getElementById("preloader");
+
+if (preloader) {
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      preloader.classList.add("hide");
+    }, 500);
+  });
+}
