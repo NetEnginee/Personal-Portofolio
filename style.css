@@ -970,3 +970,29 @@ main h1 {
     opacity: 0.5;
   }
 }
+
+.hidden {
+  opacity: 0;
+  filter: blur(0.2rem);
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.hidden:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.hidden:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.hidden:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.hidden:nth-child(5) {
+  transition-delay: 0.4s;
+}

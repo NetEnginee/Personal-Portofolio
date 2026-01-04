@@ -81,6 +81,18 @@ const cvButton = document.querySelector(
   'a[href*="Assets/Document/M Badil Arrohman CV.pdf"]'
 );
 
+const toastElement = document.getElementById("download-toast");
+
+if (cvButton && toastElement) {
+  cvButton.addEventListener("click", () => {
+    toastElement.classList.add("show");
+
+    setTimeout(() => {
+      toastElement.classList.remove("show");
+    }, 2000);
+  });
+}
+
 const preloader = document.getElementById("preloader");
 
 if (preloader) {
@@ -90,3 +102,20 @@ if (preloader) {
     }, 500);
   });
 }
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  }
+);
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));

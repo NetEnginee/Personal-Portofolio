@@ -72,8 +72,6 @@
         ]
       }
     </script>
-
-    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -128,12 +126,14 @@
     <!-- ===== PROJECTS SECTION ===== -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">My Projects</h2>
-        <p class="section-subtitle">Frontend & Network Engineering Projects</p>
+        <h2 class="section-title hidden">My Projects</h2>
+        <p class="section-subtitle hidden">
+          Frontend & Network Engineering Projects
+        </p>
 
         <div class="project-grid">
           <!-- Card 1 -->
-          <article class="project-card">
+          <article class="project-card hidden">
             <div class="card-img">
               <img
                 src="Assets/Image/Project/java project.webp"
@@ -155,7 +155,7 @@
           </article>
 
           <!-- Card 2 -->
-          <article class="project-card">
+          <article class="project-card hidden">
             <div class="card-img">
               <img
                 src="Assets/Image/Project/pomodoro.webp"
@@ -179,7 +179,7 @@
           </article>
 
           <!-- Card 3 -->
-          <article class="project-card">
+          <article class="project-card hidden">
             <div class="card-img">
               <img
                 src="Assets/Image/Project/personal portofolio.webp"
@@ -203,7 +203,7 @@
           </article>
 
           <!-- Card 4 -->
-          <article class="project-card">
+          <article class="project-card hidden">
             <div class="card-img">
               <img
                 src="Assets/Image/Project/taskly.webp"
@@ -239,7 +239,7 @@
         <p class="section-subtitle">Professional credentials & achievements.</p>
 
         <div class="cert-grid">
-          <div class="cert-card">
+          <div class="cert-card hidden">
             <div class="cert-img-wrapper">
               <img
                 src="Assets/Image/Certificate/MTCNA.webp"
@@ -257,7 +257,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card hidden">
             <div class="cert-img-wrapper">
               <img
                 src="Assets/Image/Certificate/MTCTCE.webp"
@@ -275,7 +275,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card hidden">
             <div class="cert-img-wrapper">
               <img
                 src="Assets/Image/Certificate/Learn Basic Web Programming with HTML5 CSS3 Javascript.webp"
@@ -293,7 +293,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card hidden">
             <div class="cert-img-wrapper">
               <img
                 src="Assets/Image/Certificate/Introduction to Programming Using JavaScript.webp"
@@ -311,7 +311,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card hidden">
             <div class="cert-img-wrapper">
               <img
                 src="Assets/Image/Certificate/Programming in HTML5 with JavaScript and CSS3.webp"
@@ -329,7 +329,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card hidden">
             <div class="cert-img-wrapper">
               <img
                 src="Assets/Image/Certificate/Financial Literacy.webp"
@@ -347,7 +347,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card hidden">
             <div class="cert-img-wrapper">
               <img
                 src="Assets/Image/Certificate/Mikrotik Finalis.webp"
@@ -374,7 +374,7 @@
       <div id="caption"></div>
     </div>
 
-    <section id="about" class="about">
+    <section id="about" class="about hidden">
       <div class="container">
         <h2 class="section-title">About Me</h2>
 
@@ -392,16 +392,16 @@
           <div class="about-text">
             <h3>Passionate Developer & Learner</h3>
             <p>
-              Hallo! Im <strong>Muhammad Badil Arrohman</strong>. Im is someone
-              who had focus on creating digital experience that have functional
-              and purpose. I have a great interest in turning creative ideas
-              into digital form.
+              Hallo! Im <strong>Muhammad Badil Arrohman</strong>. A Student that
+              had interest in Frontend Development with good foundation in
+              Network Engineering. I don't just build websites; I understand how
+              they are delivered perfectly to the user.
             </p>
 
             <div class="about-info">
               <div class="info-item">
                 <span class="label">Education:</span>
-                <span class="val">Information System</span>
+                <span class="val">Information System at Unpam</span>
               </div>
               <div class="info-item">
                 <span class="label">Main Skill:</span>
@@ -418,9 +418,8 @@
                 <span>Python</span>
                 <span>Git & GitHub</span>
                 <span>Ubuntu</span>
-                <span>Gemini CLI</span>
-                <span>DeepSeek</span>
-                <span>Qwen</span>
+                <span>Prompt Engineering</span>
+                <span>Responsive Design</span>
                 <span>Cisco Packet Tracer</span>
                 <span>MikroTik RouterOS</span>
               </div>
@@ -435,10 +434,11 @@
       <div class="container">
         <h2 class="section-title">Get In Touch</h2>
 
-        <div class="contact-wrapper">
+        <div class="contact-wrapper hidden">
           <p class="contact-lead">
-            Let’s connect. I’d love to hear your ideas, feedback, or just say hi
-            through my social media.
+            Let’s connect or do Some Collaboration. I’d love to hear your ideas,
+            feedback, contribution to your project, or just say hi through my
+            social media.
           </p>
 
           <div class="social-list">
@@ -520,5 +520,7 @@
         <p>Loading...</p>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
