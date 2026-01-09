@@ -54,16 +54,12 @@
       </header>
 
       <nav class="filter-container">
-        <button class="filter-btn active" onclick="filterSelection('all')">
-          View All
-        </button>
-        <button class="filter-btn" onclick="filterSelection('networking')">
+        <button class="filter-btn active" data-category="all">View All</button>
+        <button class="filter-btn" data-category="networking">
           Networking
         </button>
-        <button class="filter-btn" onclick="filterSelection('sysadmin')">
-          SysAdmin
-        </button>
-        <button class="filter-btn" onclick="filterSelection('programming')">
+        <button class="filter-btn" data-category="sysadmin">SysAdmin</button>
+        <button class="filter-btn" data-category="programming">
           Programming
         </button>
         <a href="../" class="filter-btn back-home-btn">Back to Home</a>
