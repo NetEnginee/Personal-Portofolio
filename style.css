@@ -1060,12 +1060,12 @@ main h1 {
 }
 
 .nav-list a[href*="Blog"] {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
+  display: inline-block !important;
+  padding: 0.5rem 1.5rem !important;
   margin-left: 0.5rem;
 
-  border: 1px solid #d4af37;
-  border-radius: 50px;
+  border: 1px solid #d4af37 !important;
+  border-radius: 50px !important;
   background: rgba(212, 175, 55, 0.05);
   color: #d4af37 !important;
   font-family: "Plus Jakarta Sans", sans-serif;
