@@ -15,7 +15,11 @@ Website portofolio pribadi yang dirancang untuk menampilkan perjalanan saya seba
 Saya **Muhammad Badil Arrohman**, seorang mahasiswa Sistem Informasi di **Universitas Pamulang Serang**. Saya memiliki ketertarikan mendalam dalam menghubungkan dunia pengembangan web (Frontend) dengan infrastruktur jaringan (Network Engineering).
 
 - 🔭 I'm currently working on **Personal Projects & Network Labs**
+<<<<<<< HEAD
 - 🌱 I'm currently learning **Python, Javascript, TailwindCSS, MikroTik RouterOS & Cisco**
+=======
+- 🌱 I'm currently learning **React.js & Advanced MikroTik Routing**
+>>>>>>> b87eb05 (remove for big update)
 - 🎓 **Education:** Information System Student
 - ⚡ **Fun fact:** I can configure a router while styling a div!
 
