@@ -1,0 +1,193 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flex-evenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-wrap-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin flex-wrap-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin flex-gap($gap) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin flex-center-gap($gap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flex-between-gap($gap) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+@mixin flex-wrap-gap($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+
+@mixin flex-wrap-center-gap($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $gap;
+}
+
+// --- Flex Column with Gap ---
+@mixin flex-column-gap($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-center-gap($gap) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flex-1 {
+  flex: 1;
+}
+
+@mixin flex-grow($value: 1) {
+  flex-grow: $value;
+}
+
+@mixin flex-shrink($value: 1) {
+  flex-shrink: $value;
+}
+
+@mixin flex-basis($value) {
+  flex-basis: $value;
+}
+
+@mixin flex-none {
+  flex: none;
+}
+
+@mixin navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin icon-list($gap: 1rem) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin card-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin badge-flex($gap: 0.5rem) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+
+@mixin flex-mobile-column {
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+@mixin flex-mobile-center {
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
+}

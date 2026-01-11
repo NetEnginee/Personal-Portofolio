@@ -1,0 +1,151 @@
+@mixin heading-base {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #f5f5f5;
+}
+
+@mixin h1 {
+  @include heading-base;
+  font-size: clamp(2.2rem, 5vw + 1rem, 4.5rem);
+  letter-spacing: 2px;
+}
+
+@mixin h2 {
+  @include heading-base;
+  font-size: clamp(1.8rem, 4vw + 0.5rem, 3rem);
+  letter-spacing: 1px;
+}
+
+@mixin h3 {
+  @include heading-base;
+  font-size: 1.8rem;
+}
+
+@mixin h4 {
+  @include heading-base;
+  font-size: 1.4rem;
+}
+
+@mixin h5 {
+  @include heading-base;
+  font-size: 1.2rem;
+}
+
+@mixin h6 {
+  @include heading-base;
+  font-size: 1rem;
+}
+
+@mixin body-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+@mixin body-small {
+  @include body-text;
+  font-size: 0.9rem;
+}
+
+@mixin body-large {
+  @include body-text;
+  font-size: 1.15rem;
+}
+
+@mixin text-accent {
+  color: #d4af37;
+}
+
+@mixin text-muted {
+  color: #888;
+}
+
+@mixin text-light {
+  color: #ccc;
+}
+
+@mixin text-white {
+  color: #f5f5f5;
+}
+
+@mixin text-dark {
+  color: #121212;
+}
+
+@mixin font-weight-light {
+  font-weight: 300;
+}
+
+@mixin font-weight-normal {
+  font-weight: 400;
+}
+
+@mixin font-weight-medium {
+  font-weight: 500;
+}
+
+@mixin font-weight-semibold {
+  font-weight: 600;
+}
+
+@mixin font-weight-bold {
+  font-weight: 700;
+}
+
+@mixin font-weight-extrabold {
+  font-weight: 800;
+}
+
+@mixin letter-spacing-tight {
+  letter-spacing: -0.5px;
+}
+
+@mixin letter-spacing-normal {
+  letter-spacing: 0;
+}
+
+@mixin letter-spacing-wide {
+  letter-spacing: 0.5px;
+}
+
+@mixin letter-spacing-wider {
+  letter-spacing: 2px;
+}
+
+@mixin text-uppercase {
+  text-transform: uppercase;
+}
+
+@mixin text-lowercase {
+  text-transform: lowercase;
+}
+
+@mixin text-capitalize {
+  text-transform: capitalize;
+}
+
+@mixin link-base {
+  color: #d4af37;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #e6c158;
+  }
+}
+
+@mixin link-underline {
+  @include link-base;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin link-no-style {
+  color: inherit;
+  text-decoration: none;
+}

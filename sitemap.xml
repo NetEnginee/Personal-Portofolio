@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://badil-portofolio.netlify.app/</loc>
+  <lastmod>2025-12-28T15:31:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://badil-portofolio.netlify.app/Assets/Document/M%20Badil%20Arrohman%20CV.pdf</loc>
+  <lastmod>2025-12-28T15:31:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://badil-portofolio.netlify.app/project/project%20atm%20java/</loc>
+  <lastmod>2025-12-28T15:31:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

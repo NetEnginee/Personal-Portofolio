@@ -1,0 +1,148 @@
+@mixin keyframe-float {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-25px) scale(1.05);
+    }
+  }
+}
+
+@mixin keyframe-spin {
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin keyframe-pulse {
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+
+@mixin keyframe-fade-in {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin keyframe-fade-out {
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin keyframe-slide-up {
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin keyframe-slide-down {
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin keyframe-zoom-in {
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin keyframe-bounce {
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+@mixin animate-float($duration: 20s) {
+  animation: float $duration infinite ease-in-out;
+}
+
+@mixin animate-spin($duration: 1s) {
+  animation: spin $duration ease-in-out infinite;
+}
+
+@mixin animate-pulse($duration: 1.5s) {
+  animation: pulse $duration infinite;
+}
+
+@mixin animate-fade-in($duration: 0.5s) {
+  animation: fadeIn $duration ease;
+}
+
+@mixin animate-slide-up($duration: 0.6s) {
+  animation: slideUp $duration ease;
+}
+
+@mixin animate-zoom-in($duration: 0.4s) {
+  animation: zoomIn $duration ease;
+}
+
+@mixin animate-bounce($duration: 1s) {
+  animation: bounce $duration infinite;
+}
+
+@mixin spinner($size: 50px, $color: #d4af37, $thickness: 3px) {
+  width: $size;
+  height: $size;
+  border: $thickness solid rgba($color, 0.3);
+  border-radius: 50%;
+  border-top-color: $color;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@mixin loading-dots {
+  &::after {
+    content: "...";
+    animation: pulse 1.5s infinite;
+  }
+}

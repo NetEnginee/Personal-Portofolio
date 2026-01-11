@@ -1,0 +1,97 @@
+@mixin section-padding {
+  padding: 6rem 1rem;
+}
+
+@mixin section-padding-small {
+  padding: 4rem 1rem;
+}
+
+@mixin section-padding-large {
+  padding: 8rem 1rem;
+}
+
+@mixin section-padding-mobile {
+  @media (max-width: 576px) {
+    padding: 4rem 1rem;
+  }
+}
+
+@mixin container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+@mixin container-small {
+  max-width: 800px;
+  margin: auto;
+}
+
+@mixin container-large {
+  max-width: 1400px;
+  margin: auto;
+}
+
+@mixin padding-x($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin padding-y($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+@mixin margin-x($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+@mixin margin-y($size) {
+  margin-top: $size;
+  margin-bottom: $size;
+}
+
+@mixin margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin gap-small {
+  gap: 0.5rem;
+}
+
+@mixin gap-medium {
+  gap: 1rem;
+}
+
+@mixin gap-large {
+  gap: 2rem;
+}
+
+@mixin gap-xl {
+  gap: 3rem;
+}
+
+@mixin responsive-padding {
+  padding: 6rem 1rem;
+
+  @media (max-width: 992px) {
+    padding: 5rem 1rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 4rem 1rem;
+  }
+}
+
+@mixin responsive-gap {
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 576px) {
+    gap: 1rem;
+  }
+}

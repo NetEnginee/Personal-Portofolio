@@ -1,0 +1,123 @@
+@mixin transition-smooth($property: all, $duration: 0.3s) {
+  transition: $property $duration ease;
+}
+
+@mixin transition-fast($property: all) {
+  transition: $property 0.2s ease;
+}
+
+@mixin transition-slow($property: all) {
+  transition: $property 0.5s ease;
+}
+
+@mixin transition-cubic($property: all, $duration: 0.3s) {
+  transition: $property $duration cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition-bounce($property: all, $duration: 0.5s) {
+  transition: $property $duration cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@mixin transition-smooth-transform {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@mixin transition-color {
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+@mixin transition-opacity {
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+@mixin hover-lift($distance: -3px) {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY($distance);
+  }
+}
+
+@mixin hover-scale($scale: 1.05) {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin hover-glow($color: #d4af37, $blur: 15px) {
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 5px $blur rgba($color, 0.3);
+  }
+}
+
+@mixin fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+@mixin slide-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@mixin slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@mixin blur-reveal {
+  opacity: 0;
+  filter: blur(0.2rem);
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  &.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@mixin stagger-delay($max-items: 5, $delay: 0.1s) {
+  @for $i from 2 through $max-items {
+    &:nth-child(#{$i}) {
+      transition-delay: ($i - 1) * $delay;
+    }
+  }
+}
+
+@mixin backdrop-blur($blur: 8px) {
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}

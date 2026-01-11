@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://badil-portofolio.netlify.app/sitemap.xml

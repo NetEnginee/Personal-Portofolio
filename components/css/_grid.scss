@@ -1,0 +1,136 @@
+@mixin grid {
+  display: grid;
+}
+
+@mixin grid-gap($gap) {
+  display: grid;
+  gap: $gap;
+}
+
+@mixin grid-cols($columns) {
+  display: grid;
+  grid-template-columns: $columns;
+}
+
+@mixin grid-rows($rows) {
+  display: grid;
+  grid-template-rows: $rows;
+}
+
+@mixin grid-cols-gap($columns, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+@mixin grid-auto-fit($min-width, $gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+@mixin grid-auto-fill($min-width, $gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin grid-center-gap($gap) {
+  display: grid;
+  place-items: center;
+  gap: $gap;
+}
+
+@mixin grid-align-center {
+  display: grid;
+  align-items: center;
+}
+
+@mixin grid-justify-center {
+  display: grid;
+  justify-items: center;
+}
+
+@mixin grid-2-cols($gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap;
+}
+
+@mixin grid-3-cols($gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap;
+}
+
+@mixin grid-4-cols($gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $gap;
+}
+
+@mixin project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@mixin cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@mixin about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@mixin footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+@mixin grid-span-full {
+  grid-column: 1 / -1;
+}
+
+@mixin grid-span($start, $end) {
+  grid-column: $start / $end;
+}
+
+@mixin grid-row-span($start, $end) {
+  grid-row: $start / $end;
+}
+
+@mixin grid-mobile-single {
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@mixin grid-tablet-2-cols {
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@mixin grid-responsive-cols($mobile: 1, $tablet: 2, $desktop: 3) {
+  grid-template-columns: repeat($mobile, 1fr);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat($tablet, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat($desktop, 1fr);
+  }
+}

@@ -1,0 +1,324 @@
+@use "../../components/css/reset.scss";
+@use "../../components/css/font.scss";
+@use "../../components/css/animations.scss";
+@use "../../components/css/utilities.scss";
+@use "../../components/css/grid.scss";
+@use "../../components/css/flexbox.scss";
+@use "../../components/css/transitions.scss";
+
+@use "blog-variables" as vars;
+
+* {
+  @include reset.reset;
+}
+
+body {
+  @include font.plusJakarta;
+  background-color: vars.$blog-bg;
+  color: vars.$blog-text-main;
+  padding: 60px 20px;
+  background-image: linear-gradient(vars.$blog-pattern 1px, transparent 1px),
+    linear-gradient(90deg, vars.$blog-pattern 1px, transparent 1px);
+  background-size: 40px 40px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+// ========================================
+// HEADER SECTION
+// ========================================
+
+.header-section {
+  @include utilities.text-center;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  background: linear-gradient(
+    135deg,
+    #fceabb 0%,
+    vars.$gold-primary 50%,
+    #9e7f1b 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-subtitle {
+  font-size: 1.1rem;
+  color: vars.$blog-text-muted;
+  line-height: 1.6;
+}
+
+// ========================================
+// FILTER BUTTONS
+// ========================================
+
+.filter-container {
+  @include flexbox.flex-wrap-center-gap(12px);
+  margin-bottom: 60px;
+}
+
+.filter-btn {
+  background: vars.$btn-bg;
+  border: 1px solid vars.$blog-card-border;
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: vars.$blog-text-muted;
+  @include utilities.pointer;
+  @include transitions.transition-smooth;
+
+  &:hover {
+    border-color: vars.$gold-primary;
+    color: vars.$gold-primary;
+  }
+
+  &.active {
+    background: vars.$btn-active-bg;
+    color: vars.$btn-active-text;
+    border-color: vars.$gold-primary;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  }
+}
+
+// ========================================
+// CARD GRID & CARDS
+// ========================================
+
+.card-grid {
+  @include grid.grid-auto-fill(350px, 35px);
+}
+
+.card {
+  background: vars.$blog-card-bg;
+  border-radius: vars.$radius;
+  overflow: hidden;
+  box-shadow: vars.$shadow-sm;
+  border: 1px solid vars.$blog-card-border;
+  @include flexbox.flex-column;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &.hide {
+    @include utilities.hide;
+  }
+
+  &.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: vars.$shadow-hover;
+    border-color: rgba(212, 175, 55, 0.3);
+  }
+}
+
+.card-img-wrapper {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img {
+  @include utilities.full-width;
+  @include utilities.full-height;
+  object-fit: cover;
+  @include transitions.transition-slow(transform);
+  opacity: 0.85;
+}
+
+.card:hover .card-img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.card-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid vars.$gold-primary;
+  color: vars.$gold-primary;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  @include utilities.z-index-base;
+}
+
+.card-body {
+  padding: 30px;
+  @include flexbox.flex-column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: vars.$blog-text-main;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: vars.$blog-text-muted;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.card-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: vars.$gold-primary;
+  text-decoration: none;
+  font-size: 0.95rem;
+  @include transitions.transition-smooth;
+
+  &:hover {
+    color: vars.$gold-hover;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+
+    .arrow-icon {
+      transform: translateX(6px);
+    }
+  }
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  @include transitions.transition-smooth(transform);
+}
+
+.back-home-btn {
+  text-decoration: none;
+  background-color: #121212;
+  color: #ffffff !important;
+  @include transitions.transition-smooth;
+
+  &:hover {
+    background-color: #121212;
+    transform: translateY(-2px);
+  }
+}
+
+// ========================================
+// PRELOADER
+// ========================================
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include utilities.full-screen;
+  background-color: #121212;
+  z-index: 99999;
+  @include flexbox.flex-center;
+  @include transitions.transition-opacity;
+
+  &.hide {
+    @include utilities.invisible;
+  }
+}
+
+.loader-content {
+  @include utilities.text-center;
+}
+
+.spinner {
+  @include animations.spinner(50px, vars.$gold-primary, 3px);
+  margin: 0 auto 10px;
+}
+
+.loader-content p {
+  color: vars.$gold-primary;
+  @include font.plusJakarta;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  @include animations.animate-pulse(1.5s);
+}
+
+// ========================================
+// NO POST MESSAGE
+// ========================================
+
+.no-post-message {
+  @include grid.grid-span-full;
+  @include utilities.text-center;
+  padding: 80px 20px;
+  animation: fadeIn 0.5s ease;
+
+  i {
+    font-size: 4rem;
+    color: rgba(212, 175, 55, 0.2);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: vars.$blog-text-main;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: vars.$blog-text-muted;
+  }
+
+  &.hide {
+    @include utilities.hide;
+  }
+}
+
+// ========================================
+// ANIMATIONS
+// ========================================
+
+@include animations.keyframe-spin;
+@include animations.keyframe-pulse;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ========================================
+// RESPONSIVE
+// ========================================
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2.2rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

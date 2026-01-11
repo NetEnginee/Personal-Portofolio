@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Knowledge Hub</title>
+
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+
+    <!-- DNS prefetch for additional optimization -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons for icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts and Styles -->
+    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="style/style.css" media="all" />
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#1a1a1a" />
+
+    <meta
+      name="description"
+      content="Knowledge Hub: Kumpulan catatan teknis mendalam seputar Networking, SysAdmin, dan Programming untuk profesional IT."
+    />
+    <meta
+      name="keywords"
+      content="Networking, SysAdmin, Programming, Tutorial IT, Catatan Teknis, Knowledge Hub, Linux, Web Development"
+    />
+    <meta name="author" content="Knowledge Hub" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Home | Knowledge Hub" />
+    <meta
+      property="og:description"
+      content="Kumpulan catatan teknis seputar Networking, SysAdmin, dan Programming."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://badil-portofolio.netlify.app/blog"
+    />
+    <meta
+      property="og:image"
+      content="https://badil-portofolio.netlify.app/assets/og-image.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Home | Knowledge Hub" />
+    <meta
+      name="twitter:description"
+      content="Kumpulan catatan teknis seputar Networking, SysAdmin, dan Programming."
+    />
+    <meta
+      name="twitter:image"
+      content="https://badil-portofolio.netlify.app/assets/og-image.jpg"
+    />
+    <link rel="canonical" href="https://badil-portofolio.netlify.app/blog" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-section">
+        <h1 class="header-title">Knowledge Hub.</h1>
+        <p class="header-subtitle">
+          Kumpulan catatan teknis seputar Networking, SysAdmin, dan Programming.
+        </p>
+      </header>
+
+      <nav class="filter-container">
+        <button class="filter-btn active" data-category="all">View All</button>
+        <button class="filter-btn" data-category="networking">
+          Networking
+        </button>
+        <button class="filter-btn" data-category="sysadmin">SysAdmin</button>
+        <button class="filter-btn" data-category="programming">
+          Programming
+        </button>
+        <a href="../" class="filter-btn back-home-btn">Back to Home</a>
+      </nav>
+
+      <div class="card-grid">
+        <article class="card filter-item programming">
+          <div class="card-img-wrapper">
+            <span class="card-tag">Programming</span>
+            <img
+              src="assets/programming/java project.webp"
+              alt="Java ATM"
+              class="card-img"
+              loading="lazy"
+              width="350"
+              height="220"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">ATM Sederhana (Java CLI)</h3>
+            <p class="card-desc">
+              Simulasi ATM berbasis console dengan fitur cek saldo, setor, dan
+              tarik tunai. Menggunakan struktur kontrol
+              <code>Switch-Case</code>.
+            </p>
+            <a href="programming/ATM - Java/article.html" class="card-link"
+              >Details <span class="arrow-icon">→</span></a
+            >
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- load animation -->
+    <div id="preloader">
+      <div class="loader-content">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+
+    <div id="no-post-msg" class="no-post-message hide">
+      <i class="bx bx-folder-minus"></i>
+      <h3>Belum ada artikel</h3>
+      <p>Kategori ini masih kosong. Nantikan update selanjutnya!</p>
+    </div>
+  </body>
+</html>

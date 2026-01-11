@@ -1,0 +1,122 @@
+@mixin card-base {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@mixin card-hover-lift($distance: -8px) {
+  &:hover {
+    transform: translateY($distance);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@mixin card-hover-scale($scale: 1.05) {
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin project-card {
+  @include card-base;
+  background: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  @include card-hover-lift(-8px);
+}
+
+@mixin cert-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+    box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+  }
+}
+
+@mixin card-img-wrapper($height: 200px) {
+  width: 100%;
+  height: $height;
+  overflow: hidden;
+  position: relative;
+}
+
+@mixin card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@mixin card-img-zoom {
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@mixin card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin card-title($color: #d4af37) {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: $color;
+}
+
+@mixin card-text {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+@mixin card-link {
+  align-self: flex-start;
+  font-weight: 600;
+  color: #d4af37;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+@mixin social-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 280px;
+  flex: 1 1 280px;
+
+  &:hover {
+    background: #d4af37;
+    color: #121212;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+    border-color: #d4af37;
+  }
+}
