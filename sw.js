@@ -4,11 +4,10 @@ const ASSETS_TO_CACHE = [
   "/index.html",
   "/style/style.css",
   "/script.js",
-  "assets/image/admin/Personal Picture.webp",
-  "assets/image/project/pomodoro.webp",
-  "assets/image/project/taskly.webp",
-  "assets/image/project/personal portofolio.webp",
-  "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+  "/assets/image/admin/Personal Picture.webp",
+  "/assets/image/project/pomodoro.webp",
+  "/assets/image/project/taskly.webp",
+  "/assets/image/project/personal portofolio.webp",
 ];
 
 self.addEventListener("install", (event) => {
