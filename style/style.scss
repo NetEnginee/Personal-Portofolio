@@ -732,9 +732,12 @@ main {
     position: fixed;
     top: 0;
     left: 0;
+
     @include utilities.full-width;
+
     height: 100vh;
     background: rgba(18, 18, 18, 0.9);
+
     @include transitions.backdrop-blur(10px);
     @include flexbox.flex-column-center;
     @include utilities.invisible;
@@ -748,7 +751,9 @@ main {
 
   .nav-list {
     flex-direction: column;
+
     @include utilities.text-center;
+
     gap: 2.5rem;
 
     a {
@@ -774,16 +779,23 @@ main {
   bottom: 30px;
   right: 30px;
   background: #1e1e1e;
+
   @include typography.text-white;
+
   border-left: 4px solid #d4af37;
   padding: 16px 24px;
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
   @include flexbox.flex-center-vertical;
+
   gap: 15px;
+
   @include utilities.z-index-top;
+
   opacity: 0;
   transform: translateX(100%);
+
   @include transitions.transition-bounce(all, 0.5s);
   @include font.plusJakarta;
 
@@ -875,7 +887,6 @@ main {
 
 .show {
   opacity: 1;
-  filter: blur(0);
   transform: translateY(0);
 }
 

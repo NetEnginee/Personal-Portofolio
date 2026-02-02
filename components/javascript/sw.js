@@ -19,7 +19,7 @@ self.addEventListener("install", (e) => {
         console.log("Service Worker: Caching Assets");
         return cache.addAll(ASSETS_TO_CACHE);
       })
-      .then(() => self.skipWaiting())
+      .then(() => self.skipWaiting()),
   );
 });
 
@@ -32,9 +32,9 @@ self.addEventListener("activate", (e) => {
             console.log("Service Worker: Clearing Old Cache");
             return caches.delete(cache);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });
 
@@ -52,6 +52,6 @@ self.addEventListener("fetch", (e) => {
       });
 
       return cachedResponse || networkFetch;
-    })
+    }),
   );
 });

@@ -5,6 +5,7 @@ import initCertificateModal from "./components/javascript/certificateModal.js";
 import initToast from "./components/javascript/toast.js";
 import initScrollReveal from "./components/javascript/scrollReveal.js";
 import initSecurity from "./components/javascript/security.js";
+import initCache from "./components/javascript/cache.js";
 
 inspect();
 loading();
@@ -13,3 +14,4 @@ initCertificateModal();
 initToast();
 initScrollReveal();
 initSecurity();
+initCache();
